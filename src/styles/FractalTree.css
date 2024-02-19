@@ -1,0 +1,18 @@
+/* Styles pour le conteneur de l'arbre fractal */
+#fractal-tree {
+  padding-bottom: 20px; /* Ajoute un espace en bas du conteneur */
+}
+
+/* Styles par défaut pour le canvas p5.js */
+#fractal-tree .p5Canvas {
+  width: 250px !important; /* Largeur fixe pour les écrans plus larges que 600px */
+  height: auto !important; /* Hauteur automatique pour conserver les proportions */
+}
+
+/* Ajustements pour les écrans de moins de 600px de large */
+@media only screen and (max-width: 600px) {
+  #fractal-tree .p5Canvas {
+    width: 150px !important; /* Largeur réduite pour les petits écrans */
+    height: auto !important; /* Hauteur automatique pour conserver les proportions */
+  }
+}
