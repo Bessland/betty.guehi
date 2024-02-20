@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Project.css";
-import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
+import FolderOpenRoundedIcon from '@mui/icons-material/FolderOpenRounded';
 import FadeInSection from "./FadeInSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-bootstrap/Carousel";
@@ -21,17 +21,8 @@ class Projects extends React.Component {
     });
   }
   render() {
-    const spotlightProjects = {
+    const spotlightProjects = {}
     
-      Portfolio: {
-        title: "portfolio.js",
-        desc:
-          "A small JS library that helps with data presentation.",
-        techStack: "NODE.JS (EXPRESS.JS)",
-        link: "https://github.com/Bessland/Betty/Portofolio.js",
-        
-      }
-    };
     const projects = {
       "Linux Project": {
         desc:
@@ -49,6 +40,13 @@ class Projects extends React.Component {
         techStack: "Node.js (Express.js), React.js, HTML,Css, JavaScript",
         
       },
+      Portfolio: {
+        title: "portfolio.js",
+        desc:
+          "A small JS library that helps with data presentation.",
+        techStack: "NODE.JS (EXPRESS.JS)",
+        link: "https://github.com/Bessland/Betty/Portofolio.js",
+      }
     
      
     };
