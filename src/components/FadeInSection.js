@@ -1,36 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
-export default function FadeInSection(props) {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
+const FadeInSection = (props) => {
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef();
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const currentRef = domRef.current; // Copie de domRef.current dans une variable locale
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setVisible(true);
+          observer.unobserve(currentRef);
         }
       });
     });
-
-    if (domRef.current) {
-      observer.observe(domRef.current);
-    }
+    observer.observe(currentRef);
 
     return () => {
-      if (domRef.current) {
-        observer.unobserve(domRef.current);
-      }
+      observer.unobserve(currentRef); // Utilisation de la variable locale dans la fonction de nettoyage
     };
-  }, []);
+  }, []); // La liste de dépendances vide signifie que cet effet s'exécutera une fois après le premier rendu
 
   return (
     <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
-      style={{ transitionDelay: `${props.delay}` }}
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
       ref={domRef}
     >
       {props.children}
     </div>
   );
-}
+};
+
+export default FadeInSection;
