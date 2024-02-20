@@ -9,18 +9,7 @@
   min-height: 100vh;
 }
 
-.Typist {
-  font-family: 'Roboto Condensed', sans-serif; /* Ajoutez ceci */
-  color: var(--lightest-slate);
-  text-align: center;
-  font-size: 76px;
-  margin-top: -30px;
-}
 
-.Typist .Cursor--blinking {
-  color: var(--green-bright);
-  padding-left: 4px;
-}
 
 .intro-title {
   font-family: "NTR", sans-serif;
@@ -99,3 +88,16 @@
   }
   
 }
+.Typed {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--lightest-slate);
+  text-align: center;
+  font-size: 100px; /* Ajustez la taille du texte ici */
+  margin-top: -30px;
+}
+
+.Typed .Cursor--blinking {
+  color: var(--green-bright);
+  padding-left: 4px;
+}
+

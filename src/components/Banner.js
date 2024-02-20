@@ -1,5 +1,5 @@
 import React from 'react';
-import Typical from 'react-typical';
+import { ReactTyped as Typed } from 'react-typed';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import FadeInSection from "./FadeInSection";
 import FractalTree from "./FractalTree";
@@ -11,12 +11,15 @@ class Banner extends React.Component {
       <div id="intro">
         <FractalTree />
         <div className="intro-text">
-          <Typical
-            steps={['Hi, ', 1000, 'Hi, Betty here.', 500]}
-            loop={1}
-            wrapper="p"
-            className="Typist"
-          />
+          {/* Wrap Typed in a div and apply specific styles */}
+          <div style={{ fontSize: '6em' }}> {/* Increase text size here */}
+            <Typed
+              strings={['Hi, ', 'Hi, Betty here.']}
+              typeSpeed={40}
+              backSpeed={50}
+              loop
+            />
+          </div>
         </div>
         <FadeInSection>
           <div className="intro-subtitle">I am a Science Lover.</div>

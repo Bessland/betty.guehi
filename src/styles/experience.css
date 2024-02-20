@@ -2,7 +2,7 @@
   min-height: 50vh;
   margin: auto;
   max-width: 1000px;
-  padding-top: 60px; /* Ajusté pour créer plus d'espace */
+  padding-top: 75px; /* Ajusté pour créer plus d'espace */
 }
 
 .experience-header .section-title {
@@ -14,12 +14,13 @@
 /* Styles supplémentaires pour JobList pourraient être nécessaires ici */
 
   
-  .joblist-job-title {
-    font-family: "NTR", sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--lightest-slate);
-  }
+.joblist-job-title {
+  font-family: "NTR", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #64ffda var(--green-bright); /* Modifier la couleur ici */
+}
+
   
   .joblist-job-company {
     font-family: "NTR", sans-serif;
