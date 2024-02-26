@@ -45,7 +45,7 @@ class Projects extends React.Component {
         desc:
           "A small JS library that helps with data presentation.",
         techStack: "NODE.JS (EXPRESS.JS)",
-        link: "https://github.com/Bessland/Betty/Portofolio.js",
+        link: "https://github.com/Bessland/betty.guehi/tree/master",
       }
     
      
